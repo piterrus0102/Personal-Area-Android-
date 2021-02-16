@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/deviceConnectionMainLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:windowBackground"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/deviceConnectionPrimaryLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView11_port"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="-100dp"
+            android:layout_marginStart="10dp"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/small_yellow_circle"
+            tools:layout_editor_absoluteY="68dp" />
+
+        <TextView
+            android:id="@+id/textView7_port"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="8dp"
+            android:text="1"
+            android:textColor="@color/design_default_color_surface"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/imageView11_port"
+            app:layout_constraintTop_toTopOf="@+id/imageView11_port" />
+
+        <ProgressBar
+            android:id="@+id/pb_horizontal_port"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="5dp"
+            android:layout_height="130dp"
+            android:max="100"
+            android:progressDrawable="@drawable/progressbar_custom"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/imageView11_port"
+            app:layout_constraintStart_toStartOf="@+id/imageView11_port"
+            app:layout_constraintTop_toBottomOf="@+id/imageView11_port" />
+
+        <Button
+            android:id="@+id/back_port"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/roundcornersgraybuttonondevicescreen"
+            android:drawableStart="@drawable/ic_small_arrow_back"
+            android:paddingStart="10dp"
+            android:stateListAnimator="@null"
+            android:text="Назад"
+            android:textAllCaps="false"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/createNewObject_port"
+            app:layout_constraintTop_toBottomOf="@+id/createNewObject_port" />
+
+        <TextView
+            android:id="@+id/listOfObjectsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Список объектов"
+            android:textColor="#FFF"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/connectionDeviceToObjectLabel_port"
+            app:layout_constraintTop_toBottomOf="@+id/connectionDeviceToObjectLabel_port" />
+
+        <Spinner
+            android:id="@+id/objectsToAdd_port"
+            android:layout_width="256dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#FFF"
+            android:foregroundTint="#FFF"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/connectionDeviceToObjectLabel_port"
+            app:layout_constraintTop_toBottomOf="@+id/listOfObjectsLabel" />
+
+        <ImageView
+            android:id="@+id/circleTwo_port"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="-100dp"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/imageView11_port"
+            app:layout_constraintTop_toBottomOf="@+id/pb_horizontal_port"
+            app:srcCompat="@drawable/small_gray_circle" />
+
+        <Button
+            android:id="@+id/createNewObject_port"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/roundcornersgraybuttonondevicescreen"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:stateListAnimator="@null"
+            android:text="+ Добавить новый объект"
+            android:textAllCaps="false"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/objectsToAdd_port"
+            app:layout_constraintTop_toBottomOf="@+id/objectsToAdd_port" />
+
+        <Button
+            android:id="@+id/toGetPortButton"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/roundcornersgreenbuttonondevicescreen"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:stateListAnimator="@null"
+            android:text="Получить порт"
+            android:textAllCaps="false"
+            android:visibility="visible"
+            app:layout_constraintStart_toEndOf="@+id/back_port"
+            app:layout_constraintTop_toTopOf="@+id/back_port" />
+
+        <TextView
+            android:id="@+id/connectionDeviceToObjectLabel_port"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Подключение прибора к объекту"
+            android:textColor="#C4C4C4"
+            android:textSize="18sp"
+            android:visibility="visible"
+            app:layout_constraintStart_toEndOf="@+id/imageView11_port"
+            app:layout_constraintTop_toTopOf="@+id/imageView11_port" />
+
+        <TextView
+            android:id="@+id/textView8_port"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="8dp"
+            android:text="2"
+            android:textColor="@color/design_default_color_surface"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/circleTwo_port"
+            app:layout_constraintTop_toTopOf="@+id/circleTwo_port" />
+
+        <TextView
+            android:id="@+id/textView26_port"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Сетевые настройки для прибора"
+            android:textColor="#C4C4C4"
+            android:textSize="18sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/connectionDeviceToObjectLabel_port"
+            app:layout_constraintTop_toTopOf="@+id/circleTwo_port" />
+
+        <TextView
+            android:id="@+id/textView27_port"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="IP-адрес"
+            android:textSize="18sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/textView26_port"
+            app:layout_constraintTop_toBottomOf="@+id/textView26_port" />
+
+        <TextView
+            android:id="@+id/textView28_port"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Порт"
+            android:textSize="18sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/textView27_port"
+            app:layout_constraintTop_toBottomOf="@+id/textView27_port" />
+
+        <TextView
+            android:id="@+id/IPTextView_port"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textSize="18sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/textView26_port"
+            app:layout_constraintTop_toTopOf="@+id/textView27_port" />
+
+        <TextView
+            android:id="@+id/portTextView_port"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textSize="18sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/IPTextView_port"
+            app:layout_constraintTop_toTopOf="@+id/textView28_port" />
+
+        <Button
+            android:id="@+id/closePortConnection"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/roundcornersgreenbuttonondevicescreen"
+            android:paddingStart="50dp"
+            android:paddingEnd="50dp"
+            android:text="Закрыть"
+            android:textSize="18sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/portTextView_port" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/createNewObjectScrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:windowBackground"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:id="@+id/newObjectTable2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:id="@+id/newName2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/newtextView92"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Название"
+                            android:textColor="?android:textColor"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/newNameText2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:hint="Название"
+                            android:imeOptions="actionNext"
+                            android:singleLine="true"
+                            android:maxLines="1"
+                            android:textColor="?android:textColor"
+                            android:textColorHint="#c4c4c4"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/newCustomName2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/newtextView102"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Псевдоним"
+                            android:textColor="?android:textColor"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/newCustomNameText2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:hint="Псевдоним"
+                            android:imeOptions="actionNext"
+                            android:singleLine="true"
+                            android:textColor="?android:textColor"
+                            android:textColorHint="#c4c4c4"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/newCountry2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/newtextView112"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Страна"
+                            android:textColor="?android:textColor"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/newCountryText2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:hint="Страна"
+                            android:imeOptions="actionNext"
+                            android:singleLine="true"
+                            android:textColor="?android:textColor"
+                            android:textColorHint="#c4c4c4"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/newCity2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/newtextView122"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Город"
+                            android:textColor="?android:textColor"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/newCityText2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:hint="Город"
+                            android:imeOptions="actionNext"
+                            android:singleLine="true"
+                            android:textColor="?android:textColor"
+                            android:textColorHint="#c4c4c4"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/newStreet2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/newtextView132"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Улица"
+                            android:textColor="?android:textColor"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/newStreetText2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:hint="Улица"
+                            android:imeOptions="actionNext"
+                            android:singleLine="true"
+                            android:textColor="?android:textColor"
+                            android:textColorHint="#c4c4c4"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/newHouse2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/newtextView142"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Дом"
+                            android:textColor="?android:textColor"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/newHouseText2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:hint="Дом"
+                            android:singleLine="true"
+                            android:imeOptions="actionNext"
+                            android:textColor="?android:textColor"
+                            android:textColorHint="#c4c4c4"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/newBuilding2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/newtextView152"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Строение"
+                            android:textColor="?android:textColor"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/newBuildingText2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:hint="Строение"
+                            android:imeOptions="actionNext"
+                            android:singleLine="true"
+                            android:textColor="?android:textColor"
+                            android:textColorHint="#c4c4c4"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/newFlat2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/newtextView162"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Квартира"
+                            android:textColor="?android:textColor"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/newFlatText2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:hint="Квартира"
+                            android:imeOptions="actionDone"
+                            android:singleLine="true"
+                            android:textColor="?android:textColor"
+                            android:textColorHint="#c4c4c4"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </TableRow>
+            </TableLayout>
+
+            <Button
+                android:id="@+id/createNewObjectButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/roundcornersgreenbuttonondevicescreen"
+                android:text="Сохранить"
+                android:textAllCaps="false" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

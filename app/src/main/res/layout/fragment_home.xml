@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    app:layout_scrollFlags="scroll">
+
+    <HorizontalScrollView
+        android:id="@+id/containerForObjectsHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:scrollbars="none"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutInContainerForObjectsHome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" />
+    </HorizontalScrollView>
+
+    <ScrollView
+        android:id="@+id/createNewObjectScrollViewMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:windowBackground"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <TableLayout
+                android:id="@+id/newObjectTableMain"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:id="@+id/newNameMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/newtextView9Main"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Название"
+                            android:textColor="?android:textColor"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/newNameTextMain"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:hint="Название"
+                            android:imeOptions="actionNext"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:textColor="?android:textColor"
+                            android:textColorHint="#c4c4c4"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/newCustomNameMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/newtextView10Main"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Псевдоним"
+                            android:textColor="?android:textColor"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/newCustomNameTextMain"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:hint="Псевдоним"
+                            android:imeOptions="actionNext"
+                            android:singleLine="true"
+                            android:textColor="?android:textColor"
+                            android:textColorHint="#c4c4c4"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/newCountryMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/newtextView11Main"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Страна"
+                            android:textColor="?android:textColor"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/newCountryTextMain"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:hint="Страна"
+                            android:imeOptions="actionNext"
+                            android:singleLine="true"
+                            android:textColor="?android:textColor"
+                            android:textColorHint="#c4c4c4"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/newCityMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/newtextView12Main"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Город"
+                            android:textColor="?android:textColor"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/newCityTextMain"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:hint="Город"
+                            android:imeOptions="actionNext"
+                            android:singleLine="true"
+                            android:textColor="?android:textColor"
+                            android:textColorHint="#c4c4c4"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/newStreetMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/newtextView13Main"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Улица"
+                            android:textColor="?android:textColor"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/newStreetTextMain"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:hint="Улица"
+                            android:imeOptions="actionNext"
+                            android:singleLine="true"
+                            android:textColor="?android:textColor"
+                            android:textColorHint="#c4c4c4"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/newHouseMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/newtextView14Main"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Дом"
+                            android:textColor="?android:textColor"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/newHouseTextMain"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:hint="Дом"
+                            android:imeOptions="actionNext"
+                            android:singleLine="true"
+                            android:textColor="?android:textColor"
+                            android:textColorHint="#c4c4c4"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/newBuildingMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/newtextView15Main"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Строение"
+                            android:textColor="?android:textColor"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/newBuildingTextMain"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:hint="Строение"
+                            android:imeOptions="actionNext"
+                            android:singleLine="true"
+                            android:textColor="?android:textColor"
+                            android:textColorHint="#c4c4c4"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/newFlatMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/newtextView16Main"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Квартира"
+                            android:textColor="?android:textColor"
+                            android:textSize="12sp" />
+
+                        <EditText
+                            android:id="@+id/newFlatTextMain"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:hint="Квартира"
+                            android:imeOptions="actionDone"
+                            android:singleLine="true"
+                            android:textColor="?android:textColor"
+                            android:textColorHint="#c4c4c4"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                </TableRow>
+            </TableLayout>
+
+            <Button
+                android:id="@+id/createNewObjectButtonMain"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/roundcornersgreenbuttonondevicescreen"
+                android:text="Сохранить"
+                android:textAllCaps="false" />
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/frameForObject"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/containerForObjectsHome">
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

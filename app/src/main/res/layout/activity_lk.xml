@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/authLayout"
+    android:background="?android:windowBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ru.elesta.jupiter_lkselfguard.Activities.MainActivity">
+
+    <TextView
+        android:id="@+id/headLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Объекты"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/homeButton"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:drawableTop="@drawable/ic_home_button_white"
+            android:text="Главная"
+            android:textAllCaps="false"
+            android:textColor="?android:textColor"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/objectsButton"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_objects_white_36dp"
+            android:text="Объекты"
+            android:textAllCaps="false"
+            android:textColor="?android:textColor"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/devicesButton"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_devices_button_white"
+            android:text="Приборы"
+            android:textAllCaps="false"
+            android:textColor="?android:textColor"
+            android:textSize="12sp" />
+
+<!--        <Button КНОПКА ОБЩИХ СОБЫТИЙ САМООХРАНЫ-->
+<!--            android:id="@+id/eventsButton"-->
+<!--            style="@style/Widget.AppCompat.Button.Borderless"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:drawableTop="@drawable/ic_events_button_white"-->
+<!--            android:text="События"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:textColor="?android:textColor"-->
+<!--            android:textSize="12sp" />-->
+
+        <Button
+            android:id="@+id/accountButton"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_account_button_white"
+            android:text="Учетная запись"
+            android:textAllCaps="false"
+            android:textColor="?android:textColor"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headLabel"
+        app:layout_constraintVertical_bias="0.0">
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

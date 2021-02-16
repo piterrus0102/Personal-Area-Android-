@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/responsibleMainLayout"
+    android:layout_width="match_parent"
+    android:clickable="true"
+    android:descendantFocusability="beforeDescendants"
+    android:focusable="true"
+    android:layout_height="match_parent"
+    android:background="?android:windowBackground"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/addNewKey"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Spinner
+            android:id="@+id/devices"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/keyNumberTextField"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:textColor="?android:textColor"
+            android:hint="Введите номер пользователя"
+            android:inputType="number"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/devices" />
+
+        <Button
+            android:id="@+id/saveKey"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/roundcornersgreenbuttonondevicescreen"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:text="Сохранить"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="@+id/keyNumberTextField"
+            app:layout_constraintTop_toBottomOf="@+id/keyNumberTextField" />
+
+        <Button
+            android:id="@+id/removeKey"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:background="@drawable/roundcornersredbuttononobjectinfoscreen"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="Удалить"
+            android:textAllCaps="false"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/keyNumberTextField"
+            app:layout_constraintTop_toTopOf="@+id/saveKey" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/addNewResponsible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableLayout
+            android:id="@+id/tableOfResponsibles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/roundcornersdarkgraybuttonondevicescreen"
+            android:paddingStart="5dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="5dp"
+            android:paddingBottom="5dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tableOfResponsibles">
+
+            <TextView
+                android:id="@+id/plusResponsibleSign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/roundcornersgraybuttonondevicescreen"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="5dp"
+                android:text="+"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/addNewResponsibleTextView"
+                android:layout_width="252dp"
+                android:layout_height="29dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/roundcornersgraybuttonondevicescreen"
+                android:gravity="center"
+                android:text="Добавить абонента"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/plusResponsibleSign"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/myScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/newResponsibleMainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_fio_responsible" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="ФИО"
+                android:textColor="?android:textColor"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/imageView9"
+                app:layout_constraintTop_toTopOf="@+id/imageView9" />
+
+            <CheckBox
+                android:id="@+id/writeTrackOfMovement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:buttonTint="?android:textColor"
+                android:text="Всегда записывать трек перемещения"
+                android:textColor="?android:textColor"
+                app:layout_constraintStart_toStartOf="@+id/accessAlarmButton"
+                app:layout_constraintTop_toBottomOf="@+id/umkaNumberTextField" />
+
+            <CheckBox
+                android:id="@+id/accessUmka"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:buttonTint="?android:textColor"
+                android:text='Доступ к мобильному устройству "Умка"'
+                android:textColor="?android:textColor"
+                app:layout_constraintStart_toStartOf="@+id/writeTrackOfMovement"
+                app:layout_constraintTop_toBottomOf="@id/newPasswordTextField" />
+
+            <CheckBox
+                android:id="@+id/accessAlarmButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:buttonTint="?android:textColor"
+                android:text='Доступ к мобильному приложению "ТК"'
+                android:textColor="?android:textColor"
+                app:layout_constraintStart_toStartOf="@+id/addNewKeyButton"
+                app:layout_constraintTop_toBottomOf="@+id/layoutOfKeys" />
+
+            <EditText
+                android:id="@+id/newLoginTextField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="Введите логин ТК"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="@+id/accessAlarmButton"
+                app:layout_constraintTop_toBottomOf="@+id/accessAlarmButton" />
+
+            <EditText
+                android:id="@+id/newPasswordTextField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="Введите пароль ТК"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="@+id/accessAlarmButton"
+                app:layout_constraintTop_toBottomOf="@+id/newLoginTextField" />
+
+            <Button
+                android:id="@+id/createNewResponsible"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/roundcornersgreenbuttonondevicescreen"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="Создать абонента"
+                android:textAllCaps="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/writeTrackOfMovement" />
+
+            <Button
+                android:id="@+id/removeResponsible"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/roundcornersredbuttononobjectinfoscreen"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="Удалить абонента"
+                android:textAllCaps="false"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/accessUmka" />
+
+            <EditText
+                android:id="@+id/umkaNumberTextField"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ems="10"
+                android:hint="Введите ID или REG CODE устройства"
+                android:inputType="textPersonName"
+                android:textColor="?android:textColor"
+                android:textColorHint="?android:textColor"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/accessUmka"
+                app:layout_constraintTop_toBottomOf="@+id/accessUmka" />
+
+            <Button
+                android:id="@+id/addNewKeyButton"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/roundcornerstextviewloginpasswordscreen"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="Выбрать ключи пользователей"
+                android:textAllCaps="false"
+                android:textColor="?android:textColor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/newFIOTextField" />
+
+            <LinearLayout
+                android:id="@+id/layoutOfKeys"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="@+id/addNewKeyButton"
+                app:layout_constraintTop_toBottomOf="@+id/addNewKeyButton">
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/newFIOTextField"
+                android:layout_width="0dp"
+                android:paddingStart="10dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@+id/createResponsibleName"
+                app:layout_constraintStart_toStartOf="@+id/textView2"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <Button
+                android:id="@+id/createResponsibleName"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/ic_edit_pensil"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/newFIOLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView15"
+            android:layout_width="48dp"
+            android:layout_height="57dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_fio_responsible" />
+
+        <ImageView
+            android:id="@+id/imageView16"
+            android:layout_width="48dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="@+id/imageView15"
+            app:layout_constraintTop_toBottomOf="@+id/imageView15"
+            app:srcCompat="@drawable/ic_fio_responsible" />
+
+        <ImageView
+            android:id="@+id/imageView17"
+            android:layout_width="48dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="@+id/imageView16"
+            app:layout_constraintTop_toBottomOf="@+id/imageView16"
+            app:srcCompat="@drawable/ic_fio_responsible" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:textColor="?android:textColor"
+            android:text="Фамилия"
+            app:layout_constraintStart_toEndOf="@+id/imageView15"
+            app:layout_constraintTop_toTopOf="@+id/imageView15" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?android:textColor"
+            android:text="Имя"
+            app:layout_constraintStart_toStartOf="@+id/textView19"
+            app:layout_constraintTop_toTopOf="@+id/imageView16" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?android:textColor"
+            android:text="Отчество"
+            app:layout_constraintStart_toStartOf="@+id/textView20"
+            app:layout_constraintTop_toTopOf="@+id/imageView17" />
+
+        <EditText
+            android:id="@+id/surnameTextField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textColor="?android:textColor"
+            android:textColorHint="?android:textColor"
+            android:hint="Введите фамилию"
+            android:inputType="textPersonName|textCapWords"
+            app:layout_constraintStart_toStartOf="@+id/textView19"
+            app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+        <EditText
+            android:id="@+id/firstnameTextField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textColor="?android:textColor"
+            android:textColorHint="?android:textColor"
+            android:hint="Введите имя"
+            android:inputType="textPersonName|textCapWords"
+            app:layout_constraintStart_toStartOf="@+id/textView20"
+            app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+        <EditText
+            android:id="@+id/otchestvoTextField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Введите отчество"
+            android:textColor="?android:textColor"
+            android:textColorHint="?android:textColor"
+            android:inputType="textPersonName|textCapWords"
+            app:layout_constraintStart_toStartOf="@+id/textView22"
+            app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+        <Button
+            android:id="@+id/saveFIOButton"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/roundcornersgreenbuttonondevicescreen"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:text="Сохранить"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView17" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

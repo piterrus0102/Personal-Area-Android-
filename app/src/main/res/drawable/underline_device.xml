@@ -1,0 +1,18 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:top="30dp"
+        android:left="0dp"
+        android:right="0dp">
+        <shape android:shape="line">
+            <solid android:color="@android:color/transparent"/>
+
+            <stroke android:width="5dp"
+                android:color="#E5E5E5"/>
+        </shape>
+        <scale
+            android:scaleWidth="100dp"
+            android:fillAfter="true"
+            android:pivotX="50%"
+            android:pivotY="50%">
+        </scale>
+    </item>
+</layer-list>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/authLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:windowBackground"
+    tools:context="ru.elesta.jupiter_lkselfguard.Activities.MainActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="104dp"
+        android:layout_height="98dp"
+        android:layout_marginTop="20dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logokros" />
+
+    <EditText
+        android:id="@+id/authLoginTextField"
+        style="@style/Widget.AppCompat.AutoCompleteTextView"
+        android:layout_width="256dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/roundcornerstextviewloginpasswordscreen"
+        android:duplicateParentState="true"
+        android:ems="10"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center_vertical"
+        android:hint="Имя пользователя"
+        android:inputType="textPersonName"
+        android:paddingStart="20dp"
+        android:textColor="?android:textColor"
+        android:textColorHint="#C5C5C5"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/authLabel" />
+
+    <EditText
+        android:id="@+id/authPasswordTextField"
+        android:layout_width="256dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/roundcornerstextviewloginpasswordscreen"
+        android:duplicateParentState="true"
+        android:ems="10"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center_vertical"
+        android:hint="Пароль"
+        android:inputType="textPassword"
+        android:paddingStart="20dp"
+        android:textColor="?android:textColor"
+        android:textColorHint="#C5C5C5"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/authLoginTextField" />
+
+    <Button
+        android:id="@+id/authSubmitButton"
+        android:layout_width="255dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/roundcornersbuttononloginpasswordscreen"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:text="Войти"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="?android:textColor"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/authPasswordTextField" />
+
+    <TextView
+        android:id="@+id/authLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="EG"
+        android:textColor="?android:textColor"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <TextView
+        android:id="@+id/authCopyrightLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Elesta 2021"
+        android:textColor="?android:textColor"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/serverLKPortTextField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Порт сервера ЛК"
+        android:inputType="textPersonName"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/serverLKAddressTextField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Адрес сервера ЛК"
+        android:inputType="textPersonName"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/rememberLoginPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:buttonTint="?android:textColor"
+        android:text="Запомнить логин/пароль"
+        android:textColor="?android:textColor"
+        android:textColorLink="?android:textColor"
+        app:layout_constraintStart_toStartOf="@+id/authSubmitButton"
+        app:layout_constraintTop_toBottomOf="@+id/authSubmitButton" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/myRecyclerView"
+        android:layout_width="256dp"
+        android:layout_height="120dp"
+        android:background="#13161C"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/authLoginTextField"
+        app:layout_constraintStart_toStartOf="@+id/authLoginTextField" />
+
+    <Button
+        android:id="@+id/registrationButton"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/roundcornersgraybuttonondevicescreen"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:text="Регистрация"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/autoLogInCheckbox" />
+
+    <CheckBox
+        android:id="@+id/autoLogInCheckbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="?android:textColor"
+        android:buttonTint="?android:textColor"
+        android:text="Автоматический вход"
+        app:layout_constraintStart_toStartOf="@+id/rememberLoginPassword"
+        app:layout_constraintTop_toBottomOf="@+id/rememberLoginPassword" />
+
+    <Button
+        android:id="@+id/forgetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Напомнить пароль"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registrationButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

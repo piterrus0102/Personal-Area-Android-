@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:windowBackground"
+    tools:context=".Activities.RegistrationActivity">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:text="Логин"
+        android:textSize="18sp"
+        android:textColor="?android:textColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Пароль"
+        android:textSize="18sp"
+        android:textColor="?android:textColor"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Почта"
+        android:textSize="18sp"
+        android:textColor="?android:textColor"
+        app:layout_constraintStart_toStartOf="@+id/textView23"
+        app:layout_constraintTop_toBottomOf="@+id/promptView" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Телефон"
+        android:textSize="18sp"
+        android:textColor="?android:textColor"
+        app:layout_constraintStart_toStartOf="@+id/textView24"
+        app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+    <CheckBox
+        android:id="@+id/checkboxPersonalData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textColor="?android:textColor"
+        android:buttonTint="?android:textColor"
+        app:layout_constraintStart_toStartOf="@+id/textView25"
+        app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+    <CheckBox
+        android:id="@+id/checkboxUserAgreement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textColor="?android:textColor"
+        android:buttonTint="?android:textColor"
+        app:layout_constraintStart_toStartOf="@+id/checkboxPersonalData"
+        app:layout_constraintTop_toBottomOf="@+id/checkboxPersonalData" />
+
+    <Button
+        android:id="@+id/submitRegistrationButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/roundcornersgreenbuttonondevicescreen"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:text="Регистрация"
+        android:textColor="?android:textColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkboxUserAgreement" />
+
+    <EditText
+        android:id="@+id/registrationLoginTextField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:ems="10"
+        android:hint="Введите логин"
+        android:inputType="textPersonName"
+        android:textColor="?android:textColor"
+        android:textColorHint="#C5C5C5"
+        app:layout_constraintBottom_toBottomOf="@+id/textView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView6" />
+
+    <EditText
+        android:id="@+id/registrationPasswordTextField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Введите пароль"
+        android:inputType="textPassword"
+        android:textColor="?android:textColor"
+        android:textColorHint="#C5C5C5"
+        app:layout_constraintBottom_toBottomOf="@+id/textView23"
+        app:layout_constraintEnd_toEndOf="@+id/registrationLoginTextField"
+        app:layout_constraintTop_toTopOf="@+id/textView23" />
+
+    <EditText
+        android:id="@+id/registrationMailTextField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Введите почту"
+        android:inputType="textEmailAddress"
+        android:textColor="?android:textColor"
+        android:textColorHint="#C5C5C5"
+        app:layout_constraintBottom_toBottomOf="@+id/textView24"
+        app:layout_constraintEnd_toEndOf="@+id/registrationPasswordTextField"
+        app:layout_constraintTop_toTopOf="@+id/textView24" />
+
+    <EditText
+        android:id="@+id/registrationPhoneTextField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Введите телефон"
+        android:inputType="phone"
+        android:textColor="?android:textColor"
+        android:textColorHint="#C5C5C5"
+        app:layout_constraintBottom_toBottomOf="@+id/textView25"
+        app:layout_constraintEnd_toEndOf="@+id/registrationMailTextField"
+        app:layout_constraintTop_toTopOf="@+id/textView25" />
+
+    <TextView
+        android:id="@+id/promptView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Пароль должен содержать заглавные и строчные буквы латинского алфавита, а также цифры и длина пароля должна находиться в диапазоне от 7 до 15 символов"
+        android:textAlignment="center"
+        android:textColor="?android:textColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+    <TextView
+        android:id="@+id/personalDataTextView"
+        android:layout_width="312dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:autoLink="web"
+        android:textColor="?android:textColor"
+        app:layout_constraintBottom_toBottomOf="@+id/checkboxPersonalData"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/checkboxPersonalData"
+        app:layout_constraintTop_toTopOf="@+id/checkboxPersonalData" />
+
+    <TextView
+        android:id="@+id/userAgreementTextView"
+        android:layout_width="312dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:autoLink="web"
+        android:textColor="?android:textColor"
+        app:layout_constraintBottom_toBottomOf="@+id/checkboxUserAgreement"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/checkboxUserAgreement"
+        app:layout_constraintTop_toTopOf="@+id/checkboxUserAgreement" />
+
+    <ImageView
+        android:id="@+id/eyeImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/registrationPasswordTextField"
+        app:layout_constraintStart_toEndOf="@+id/registrationPasswordTextField"
+        app:layout_constraintTop_toTopOf="@+id/registrationPasswordTextField"
+        app:srcCompat="@drawable/ic_visibilityon" />
+</androidx.constraintlayout.widget.ConstraintLayout>
